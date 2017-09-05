@@ -13,10 +13,14 @@
 
 (defonce server (atom nil))
 
+(defn server-running? []
+  (not (nil? @server)))
+
 (defn stop-server! []
-  (when-not (nil? @server)
+  (when (server-running?)
     ;; graceful shutdown: wait 100ms for existing requests to be finished
     ;; :timeout is optional, when no timeout, stop immediately
+    (println "stopping server")
     (@server :timeout 100)
     (reset! server nil)))
 
