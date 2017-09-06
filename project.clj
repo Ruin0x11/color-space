@@ -6,7 +6,9 @@
                  [http-kit "2.3.0-alpha2"]
                  [bidi "2.1.2"]
                  [hiccup "1.0.5"]
-                 [cheshire "5.8.0"]]
+                 [cheshire "5.8.0"]
+                 [incanter/incanter-core "1.9.1"]
+                 [net.mikera/imagez "0.12.0"]]
 
   :main ring-practice.core
 
